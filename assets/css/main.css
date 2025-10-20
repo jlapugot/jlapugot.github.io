@@ -350,6 +350,81 @@ blockquote {
   text-align: center;
 }
 
+/* Accordion Sections */
+.accordion-section {
+  margin: 2rem 0;
+}
+
+.accordion-section details {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.accordion-section details[open] {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-section summary {
+  cursor: pointer;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  list-style: none;
+  user-select: none;
+  background: #fafafa;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.accordion-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-section summary::before {
+  content: '+';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+.accordion-section details[open] summary::before {
+  content: '−';
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion-section summary:hover {
+  background: #f0f0f0;
+  border-bottom-color: var(--accent-color);
+}
+
+.accordion-section details[open] summary {
+  background: white;
+  border-bottom-color: var(--light-gray);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.accordion-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* Keep normal styling inside accordion */
+.accordion-content h3 {
+  margin-top: 1.5rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   body {
@@ -391,5 +466,20 @@ blockquote {
   .post-content table th,
   .post-content table td {
     padding: 0.5rem;
+  }
+
+  /* Smaller accordion on mobile */
+  .accordion-section summary {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .accordion-section summary::before {
+    right: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .accordion-content {
+    padding: 0 1rem 1rem 1rem;
   }
 }
