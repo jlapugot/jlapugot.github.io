@@ -4,6 +4,9 @@ title: "Spring IoC and Dependency Injection: The Difference Between a Restaurant
 date: 2025-10-20
 tags: [spring, java, dependency-injection, ioc, design-patterns]
 analogy_domain: "cooking"
+excerpt: "Learn the crucial difference between Inversion of Control (IoC) and Dependency Injection (DI) in Spring Framework through a simple restaurant analogy. Understand when to use constructor, setter, or field injection."
+description: "A comprehensive guide to understanding Spring IoC and Dependency Injection using restaurant analogies. Perfect for senior developers preparing for technical interviews."
+keywords: spring framework, dependency injection, inversion of control, spring ioc, java spring, constructor injection, setter injection, field injection
 related_concepts:
   - "Spring Bean lifecycle"
   - "Constructor vs setter injection"
@@ -30,7 +33,7 @@ Imagine a chef who:
 
 The chef has complete control but is tightly coupled to specific suppliers, must know where everything is, and spends more time managing logistics than cooking.
 
-![The Overwhelmed Chef - Before IoC]({{ '/assets/overwhelmed_chef.png' | relative_url }})
+![Overwhelmed chef managing everything manually without IoC - illustrating tight coupling and control flow issues]({{ '/assets/overwhelmed_chef.png' | relative_url }})
 
 <div class="mermaid">
 graph LR
@@ -66,7 +69,7 @@ Now imagine a restaurant with a **menu system**:
 - The chef focuses on cooking, not procurement
 - Control is "inverted" - the restaurant provides ingredients to the chef, not the other way around
 
-![The Relaxed Chef - After IoC]({{ '/assets/relaxed_chef.png' | relative_url }})
+![Relaxed chef with IoC framework handling dependencies - showing delegation and inversion of control benefits]({{ '/assets/relaxed_chef.png' | relative_url }})
 
 <div class="mermaid">
 graph LR

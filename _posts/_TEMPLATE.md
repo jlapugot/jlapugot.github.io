@@ -4,6 +4,9 @@ title: "[Concept]: [Brief Description]"
 date: YYYY-MM-DD
 tags: [tag1, tag2, tag3]
 analogy_domain: "cooking | sports | music | architecture | transportation | etc."
+excerpt: "Write a compelling 1-2 sentence summary that will appear in search results and social media previews. Focus on the problem solved and value provided."
+description: "A more detailed SEO-focused description (150-160 characters) that includes target keywords naturally."
+keywords: primary keyword, secondary keyword, related term, technical concept, programming language
 related_concepts:
   - "Related concept 1"
   - "Related concept 2"

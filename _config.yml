@@ -1,10 +1,39 @@
 # Site settings
 title: "Brackets & Blueprints"
-description: "Complex engineering concepts explained through powerful analogies"
+description: "Complex engineering concepts explained through powerful analogies. A technical blog for senior engineers covering Java, Spring, concurrency, system design, and more."
+tagline: "Master complex topics through simple analogies"
 author: "Julius Lapugot"
-email: your-email@example.com
+email: juliusclapugot@gmail.com
 url: "https://jlapugot.github.io"
 baseurl: "/brackets-and-blueprints"
+
+# SEO Settings
+lang: en_US
+timezone: Asia/Manila
+
+# Social Links
+social:
+  name: Julius Lapugot
+  links:
+    - https://github.com/jlapugot
+    - https://linkedin.com/in/julius-cessar-lapugot-a31985155
+
+# Open Graph Defaults
+logo: /assets/logo.png
+social_image: /assets/logo.png
+
+# Keywords for better discoverability
+keywords:
+  - java programming
+  - spring framework
+  - software engineering
+  - concurrency
+  - system design
+  - technical blog
+  - coding tutorials
+  - senior developer
+  - backend development
+  - microservices
 
 # Build settings
 markdown: kramdown
@@ -24,6 +53,8 @@ defaults:
     values:
       layout: "post"
       comments: true
+      image: /assets/logo.png
+      author: Julius Lapugot
 
 # Plugins
 plugins:
