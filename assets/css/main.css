@@ -262,6 +262,45 @@ blockquote {
   margin-bottom: 0.5rem;
 }
 
+/* Tables */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-content table thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.post-content table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.post-content table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.post-content table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.post-content table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Alternating row colors for better readability */
+.post-content table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
 /* Mermaid Diagrams */
 .mermaid {
   background-color: #fafafa;
@@ -303,5 +342,15 @@ blockquote {
   nav a {
     margin-right: 1rem;
     font-size: 0.95rem;
+  }
+
+  /* Responsive tables */
+  .post-content table {
+    font-size: 0.85rem;
+  }
+
+  .post-content table th,
+  .post-content table td {
+    padding: 0.5rem;
   }
 }
