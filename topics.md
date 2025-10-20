@@ -35,6 +35,15 @@ permalink: /topics/
       {{ algo_posts.size }} posts
     </div>
   </div>
+
+  <div class="series-card">
+    <h3><a href="{{ '/series/system-design/' | relative_url }}">System Design Fundamentals</a></h3>
+    <p>Master scalability, distributed systems, microservices, and architecture patterns for senior roles.</p>
+    <div class="series-stats">
+      {% assign design_posts = site.posts | where: "series", "system-design" %}
+      {{ design_posts.size }} posts
+    </div>
+  </div>
 </div>
 
 ---
