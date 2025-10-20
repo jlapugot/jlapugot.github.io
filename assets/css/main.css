@@ -433,6 +433,172 @@ blockquote {
   text-align: center;
 }
 
+/* About Page Styling */
+.container > h1:first-child {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+}
+
+/* About page sections */
+body:has([title="About"]) .container h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--accent-color);
+  color: var(--primary-color);
+}
+
+body:has([title="About"]) .container > p,
+body:has([title="About"]) .container ul {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body:has([title="About"]) .container ul {
+  padding-left: 2rem;
+}
+
+body:has([title="About"]) .container ol {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+}
+
+body:has([title="About"]) .container blockquote {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 600px;
+}
+
+/* Topics Page Styling */
+body:has([title="Topics"]) .container h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+body:has([title="Topics"]) .container h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  padding-top: 3rem;
+  border-top: 2px solid var(--light-gray);
+}
+
+/* Tag cloud styling */
+.tag-cloud {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.tag-group {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.tag-group:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color);
+}
+
+.tag-group h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--light-gray);
+  padding-bottom: 0.5rem;
+}
+
+.tag-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tag-group li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tag-group li:last-child {
+  border-bottom: none;
+}
+
+.tag-group li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  flex: 1;
+  transition: color 0.2s ease;
+}
+
+.tag-group li a:hover {
+  color: var(--accent-color);
+}
+
+.tag-group .post-date {
+  color: #888;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* Analogy domain sections */
+body:has([title="Topics"]) .container h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  padding-left: 1rem;
+  border-left: 4px solid var(--accent-color);
+}
+
+body:has([title="Topics"]) .container > ul {
+  max-width: 800px;
+  margin: 1rem auto 2rem;
+  background: #fafafa;
+  padding: 1.5rem 2rem 1.5rem 3rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+body:has([title="Topics"]) .container > ul li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+body:has([title="Topics"]) .container > ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+body:has([title="Topics"]) .container > ul li a:hover {
+  color: var(--accent-color);
+}
+
 /* Accordion Sections */
 .accordion-section {
   margin: 2rem 0;
@@ -583,6 +749,22 @@ blockquote {
   .posts {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  /* About page mobile */
+  body:has([title="About"]) .container h1,
+  body:has([title="Topics"]) .container h1 {
+    font-size: 2rem;
+  }
+
+  body:has([title="About"]) .container h2,
+  body:has([title="Topics"]) .container h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Topics page mobile */
+  .tag-cloud {
+    grid-template-columns: 1fr;
   }
 
   /* Responsive tables */
