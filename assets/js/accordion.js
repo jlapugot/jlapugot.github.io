@@ -44,6 +44,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Build the accordion structure
     elementsToMove.forEach(el => content.appendChild(el));
+
+    // Add collapse button at the end
+    const collapseBtn = document.createElement('button');
+    collapseBtn.className = 'accordion-collapse-btn';
+    collapseBtn.textContent = 'Collapse Section ▲';
+    collapseBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      details.removeAttribute('open');
+      // Scroll to the section heading smoothly
+      summary.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    content.appendChild(collapseBtn);
+
     details.appendChild(summary);
     details.appendChild(content);
     wrapper.appendChild(details);

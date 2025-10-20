@@ -425,6 +425,30 @@ blockquote {
   margin-top: 1.5rem;
 }
 
+/* Collapse button at end of section */
+.accordion-collapse-btn {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.75rem;
+  background: var(--light-gray);
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.accordion-collapse-btn:hover {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   body {
