@@ -4,6 +4,9 @@ title: "Big O Notation: Finding Books in a Library"
 date: 2025-10-20
 tags: [algorithms, data-structures, complexity, performance, computer-science]
 analogy_domain: "library"
+series: "algorithms-data-structures"
+series_title: "Algorithms & Data Structures"
+series_order: 1
 excerpt: "Master Big O notation and algorithm complexity through a simple library analogy. Learn to identify O(1), O(log n), O(n), O(n log n), and O(n²) in real code."
 description: "A comprehensive guide to understanding Big O notation and time complexity using library book-finding analogies. Perfect for technical interviews and algorithm optimization."
 keywords: big o notation, time complexity, space complexity, algorithm analysis, data structures, performance optimization, algorithmic complexity

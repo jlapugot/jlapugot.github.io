@@ -481,6 +481,215 @@ body:has([title="About"]) .container blockquote {
   max-width: 600px;
 }
 
+/* Series Badge */
+.series-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.series-badge a {
+  color: white;
+  text-decoration: none;
+}
+
+.series-badge a:hover {
+  text-decoration: underline;
+}
+
+.series-badge strong {
+  font-weight: 600;
+}
+
+/* Series Navigation */
+.series-navigation {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--light-gray);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.series-nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.series-nav-prev,
+.series-nav-next {
+  flex: 1;
+  min-width: 250px;
+  padding: 1rem 1.5rem;
+  background: white;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.series-nav-prev:hover,
+.series-nav-next:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.series-nav-prev {
+  text-align: left;
+}
+
+.series-nav-next {
+  text-align: right;
+}
+
+.series-nav-all {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.series-nav-all:hover {
+  background: #2980b9;
+}
+
+/* Series Index Page */
+.series-index {
+  display: grid;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.series-post-card {
+  background: white;
+  border: 2px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 0.3s;
+  position: relative;
+  padding-left: 5rem;
+}
+
+.series-post-card:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.series-order {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.series-post-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.series-post-card h3 a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.series-post-card h3 a:hover {
+  color: var(--accent-color);
+}
+
+.series-excerpt {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.series-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.series-domain {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.series-date {
+  color: #aaa;
+}
+
+/* Series List on Topics Page */
+.series-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+
+.series-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.series-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.series-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.series-card h3 a {
+  color: white;
+  text-decoration: none;
+}
+
+.series-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.series-card p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.series-stats {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
 /* Topics Page Styling */
 body:has([title="Topics"]) .container h1 {
   font-size: 3rem;

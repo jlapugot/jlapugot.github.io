@@ -4,6 +4,9 @@ title: "HashMap, ConcurrentHashMap, and Synchronized Maps: Movie Theater Seating
 date: 2025-10-20
 tags: [java, concurrency, collections, data-structures, performance]
 analogy_domain: "entertainment"
+series: "java-concurrency"
+series_title: "Java Concurrency Fundamentals"
+series_order: 1
 excerpt: "Understand the critical differences between HashMap, ConcurrentHashMap, and Synchronized Map through a movie theater seating analogy. Learn which to use for thread-safe, high-performance Java applications."
 description: "Master Java concurrency with this comprehensive guide comparing HashMap, ConcurrentHashMap, and synchronized Maps. Includes performance benchmarks, code examples, and best practices for multi-threaded applications."
 keywords: java hashmap, concurrenthashmap, synchronized map, java concurrency, thread safety, java collections, lock striping, concurrent programming

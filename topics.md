@@ -6,6 +6,39 @@ permalink: /topics/
 
 # Browse by Topic
 
+## Series
+
+<div class="series-list">
+  <div class="series-card">
+    <h3><a href="{{ '/series/spring-framework/' | relative_url }}">Spring Framework Deep Dive</a></h3>
+    <p>Master Spring Boot, dependency injection, AOP, and enterprise Java development.</p>
+    <div class="series-stats">
+      {% assign spring_posts = site.posts | where: "series", "spring-framework" %}
+      {{ spring_posts.size }} posts
+    </div>
+  </div>
+
+  <div class="series-card">
+    <h3><a href="{{ '/series/java-concurrency/' | relative_url }}">Java Concurrency Fundamentals</a></h3>
+    <p>Master multi-threading, synchronization, and concurrent programming through powerful analogies.</p>
+    <div class="series-stats">
+      {% assign concurrency_posts = site.posts | where: "series", "java-concurrency" %}
+      {{ concurrency_posts.size }} posts
+    </div>
+  </div>
+
+  <div class="series-card">
+    <h3><a href="{{ '/series/algorithms-data-structures/' | relative_url }}">Algorithms & Data Structures</a></h3>
+    <p>Master Big O, sorting, searching, trees, graphs, and algorithmic thinking for interviews.</p>
+    <div class="series-stats">
+      {% assign algo_posts = site.posts | where: "series", "algorithms-data-structures" %}
+      {{ algo_posts.size }} posts
+    </div>
+  </div>
+</div>
+
+---
+
 ## All Tags
 
 <div class="tag-cloud">

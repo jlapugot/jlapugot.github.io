@@ -4,6 +4,9 @@ title: "Deadlock vs Race Condition: Traffic Intersections and Parking Spots"
 date: 2025-10-20
 tags: [java, concurrency, multithreading, synchronization, debugging]
 analogy_domain: "transportation"
+series: "java-concurrency"
+series_title: "Java Concurrency Fundamentals"
+series_order: 2
 excerpt: "Understand the critical difference between deadlocks and race conditions through traffic analogies. Learn how to identify, prevent, and debug these common concurrency issues in multi-threaded applications."
 description: "A comprehensive guide to deadlocks and race conditions in Java using traffic intersection analogies. Includes detection strategies, prevention techniques, and real-world code examples for senior developers."
 keywords: deadlock, race condition, java concurrency, thread synchronization, multithreading, concurrent programming, thread safety, lock ordering

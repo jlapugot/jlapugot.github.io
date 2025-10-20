@@ -4,6 +4,14 @@ layout: default
 
 <article class="post">
   <header class="post-header">
+    {% if page.series %}
+    <div class="series-badge">
+      <a href="{{ '/series/' | append: page.series | append: '/' | relative_url }}">
+        Part of the <strong>{{ page.series_title | default: page.series }}</strong> series
+      </a>
+    </div>
+    {% endif %}
+
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
@@ -38,6 +46,39 @@ layout: default
       {% endfor %}
     </ul>
   </div>
+  {% endif %}
+
+  {% if page.series %}
+  <nav class="series-navigation">
+    {% assign series_posts = site.posts | where: "series", page.series | sort: "series_order" %}
+    {% for post in series_posts %}
+      {% if post.url == page.url %}
+        {% assign current_index = forloop.index0 %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="series-nav-links">
+      {% if current_index > 0 %}
+        {% assign prev_post = series_posts[current_index | minus: 1] %}
+        <a href="{{ prev_post.url | relative_url }}" class="series-nav-prev">
+          ← Previous: {{ prev_post.title }}
+        </a>
+      {% endif %}
+
+      {% assign next_index = current_index | plus: 1 %}
+      {% if next_index < series_posts.size %}
+        {% assign next_post = series_posts[next_index] %}
+        <a href="{{ next_post.url | relative_url }}" class="series-nav-next">
+          Next: {{ next_post.title }} →
+        </a>
+      {% endif %}
+    </div>
+
+    <a href="{{ '/series/' | append: page.series | append: '/' | relative_url }}" class="series-nav-all">
+      View all posts in this series
+    </a>
+  </nav>
   {% endif %}
 
   <footer class="post-footer">

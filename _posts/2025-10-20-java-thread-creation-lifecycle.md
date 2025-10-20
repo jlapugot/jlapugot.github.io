@@ -4,6 +4,9 @@ title: "Java Thread Creation and Lifecycle: Call Center Operations"
 date: 2025-10-20
 tags: [java, threads, concurrency, multithreading, thread-pools, executor-service]
 analogy_domain: "business"
+series: "java-concurrency"
+series_title: "Java Concurrency Fundamentals"
+series_order: 3
 excerpt: "Understand when and how Java creates threads using a call center analogy. Learn thread lifecycle states, creation methods, and why thread pools are essential for production applications."
 description: "A comprehensive guide to Java thread creation and lifecycle explained through call center operations. Covers thread states, creation patterns, ExecutorService, and thread pool management for senior developers."
 keywords: java threads, thread lifecycle, thread creation, thread pools, ExecutorService, multithreading, concurrent programming, thread states

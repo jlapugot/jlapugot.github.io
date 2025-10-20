@@ -4,6 +4,9 @@ title: "Spring IoC and Dependency Injection: The Difference Between a Restaurant
 date: 2025-10-20
 tags: [spring, java, dependency-injection, ioc, design-patterns]
 analogy_domain: "cooking"
+series: "spring-framework"
+series_title: "Spring Framework Deep Dive"
+series_order: 1
 excerpt: "Learn the crucial difference between Inversion of Control (IoC) and Dependency Injection (DI) in Spring Framework through a simple restaurant analogy. Understand when to use constructor, setter, or field injection."
 description: "A comprehensive guide to understanding Spring IoC and Dependency Injection using restaurant analogies. Perfect for senior developers preparing for technical interviews."
 keywords: spring framework, dependency injection, inversion of control, spring ioc, java spring, constructor injection, setter injection, field injection
