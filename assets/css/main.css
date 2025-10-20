@@ -121,26 +121,109 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Post Preview */
-.post-preview {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--light-gray);
+/* Home Page Hero */
+.home h1 {
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
 }
 
-.post-preview:last-child {
-  border-bottom: none;
+.home blockquote {
+  font-size: 1.3rem;
+  text-align: center;
+  border-left: none;
+  padding: 1.5rem 0;
+  margin: 2rem auto;
+  max-width: 700px;
+  color: #555;
+}
+
+.home > p:first-of-type {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Why Analogies Section */
+.home h2:first-of-type {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.home h2:first-of-type + p {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: #666;
+}
+
+/* Latest Posts Section */
+.home h2:last-of-type {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  padding-top: 3rem;
+  border-top: 2px solid var(--light-gray);
+}
+
+/* Post Preview Cards */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.post-preview {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.post-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color);
 }
 
 .post-preview h3 {
   margin-top: 0;
-  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.post-preview h3 a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-preview h3 a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
 .post-meta {
-  color: #666;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 /* Tags */
@@ -480,6 +563,26 @@ blockquote {
   nav a {
     margin-right: 1rem;
     font-size: 0.95rem;
+  }
+
+  /* Home page mobile */
+  .home h1 {
+    font-size: 2rem;
+  }
+
+  .home blockquote {
+    font-size: 1.1rem;
+    padding: 1rem 0;
+  }
+
+  .home > p:first-of-type {
+    font-size: 1rem;
+  }
+
+  /* Single column on mobile */
+  .posts {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   /* Responsive tables */
