@@ -33,8 +33,6 @@ Imagine a chef who:
 
 The chef has complete control but is tightly coupled to specific suppliers, must know where everything is, and spends more time managing logistics than cooking.
 
-![Overwhelmed chef managing everything manually without IoC - illustrating tight coupling and control flow issues]({{ '/assets/overwhelmed_chef.png' | relative_url }})
-
 <div class="mermaid">
 graph LR
     A[Chef] -->|goes to| B[Market]
@@ -68,8 +66,6 @@ Now imagine a restaurant with a **menu system**:
 - Someone else (the restaurant manager) decides suppliers
 - The chef focuses on cooking, not procurement
 - Control is "inverted" - the restaurant provides ingredients to the chef, not the other way around
-
-![Relaxed chef with IoC framework handling dependencies - showing delegation and inversion of control benefits]({{ '/assets/relaxed_chef.png' | relative_url }})
 
 <div class="mermaid">
 graph LR
