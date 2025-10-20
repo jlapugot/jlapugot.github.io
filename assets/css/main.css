@@ -262,6 +262,45 @@ blockquote {
   margin-bottom: 0.5rem;
 }
 
+/* Unordered Lists */
+.post-content ul {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.post-content ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.post-content ul li::marker {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Nested lists */
+.post-content ul ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Ordered Lists */
+.post-content ol {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.post-content ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.post-content ol li::marker {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
 /* Tables */
 .post-content table {
   width: 100%;
