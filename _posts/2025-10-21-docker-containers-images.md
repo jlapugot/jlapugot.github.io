@@ -473,14 +473,14 @@ CMD ["python", "app.py"]          # Layer 5: Rebuilt
 **Best practice: Order by change frequency**
 
 ```dockerfile
-# ✅ GOOD: Least changing to most changing
+# GOOD: Least changing to most changing
 FROM python:3.9-slim         # Rarely changes
 COPY requirements.txt .      # Changes occasionally
 RUN pip install -r requirements.txt
 COPY . .                     # Changes frequently (your code)
 CMD ["python", "app.py"]
 
-# ❌ BAD: Code copied early
+# BAD: Code copied early
 FROM python:3.9-slim
 COPY . .                     # Changes frequently
 RUN pip install -r requirements.txt  # Reinstalls every time!
@@ -804,11 +804,11 @@ docker system df                 # Show disk usage
 **1. Keep images small**
 
 ```dockerfile
-# ❌ BAD: Large base image
+# BAD: Large base image
 FROM ubuntu:latest
 RUN apt-get install python3
 
-# ✅ GOOD: Slim base image
+# GOOD: Slim base image
 FROM python:3.9-alpine
 ```
 
