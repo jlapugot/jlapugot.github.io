@@ -2,7 +2,7 @@
 layout: post
 title: "Big O Notation: Finding Books in a Library"
 date: 2025-10-20
-tags: [algorithms, data-structures, complexity, performance, computer-science]
+tags: [algorithms]
 analogy_domain: "library"
 series: "algorithms-data-structures"
 series_title: "Algorithms & Data Structures"

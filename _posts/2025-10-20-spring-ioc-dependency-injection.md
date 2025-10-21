@@ -2,7 +2,7 @@
 layout: post
 title: "Spring IoC and Dependency Injection: The Difference Between a Restaurant's Menu and Kitchen Staff"
 date: 2025-10-20
-tags: [spring, java, dependency-injection, ioc, design-patterns]
+tags: [java, spring]
 analogy_domain: "cooking"
 series: "spring-framework"
 series_title: "Spring Framework Deep Dive"

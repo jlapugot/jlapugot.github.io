@@ -2,7 +2,7 @@
 layout: post
 title: "Java Thread Creation and Lifecycle: Call Center Operations"
 date: 2025-10-20
-tags: [java, threads, concurrency, multithreading, thread-pools, executor-service]
+tags: [java, concurrency]
 analogy_domain: "business"
 series: "java-concurrency"
 series_title: "Java Concurrency Fundamentals"

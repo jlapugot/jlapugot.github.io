@@ -50,20 +50,12 @@ permalink: /topics/
 
 ## All Tags
 
-<div class="tag-cloud">
+<div class="tag-cloud-compact">
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
-  <div class="tag-group">
-    <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
-    <ul>
-    {% for post in tag[1] %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-      </li>
-    {% endfor %}
-    </ul>
-  </div>
+  <a href="{{ '/tag/' | append: tag[0] | downcase | replace: ' ', '-' | append: '/' | relative_url }}" class="tag-badge">
+    {{ tag[0] }} <span class="tag-count">{{ tag[1].size }}</span>
+  </a>
 {% endfor %}
 </div>
 
@@ -71,76 +63,148 @@ permalink: /topics/
 
 ## By Analogy Domain
 
-### Cooking
-{% assign cooking_posts = site.posts | where: "analogy_domain", "cooking" %}
-{% if cooking_posts.size > 0 %}
-{% for post in cooking_posts %}
-- [{{ post.title }}]({{ post.url | relative_url }})
-{% endfor %}
-{% else %}
-*No posts yet in this domain.*
-{% endif %}
+<div class="domain-grid">
+  {% assign cooking_posts = site.posts | where: "analogy_domain", "cooking" %}
+  {% if cooking_posts.size > 0 %}
+  <a href="{{ '/domain/cooking/' | relative_url }}" class="domain-card">
+    <div class="domain-header">
+      <h3>Cooking</h3>
+      <span class="domain-count">{{ cooking_posts.size }}</span>
+    </div>
+    <ul class="domain-posts">
+      {% for post in cooking_posts limit:3 %}
+      <li>{{ post.title }}</li>
+      {% endfor %}
+    </ul>
+    {% if cooking_posts.size > 3 %}
+    <span class="domain-view-all">View all {{ cooking_posts.size }} posts →</span>
+    {% endif %}
+  </a>
+  {% endif %}
 
-### Entertainment
-{% assign entertainment_posts = site.posts | where: "analogy_domain", "entertainment" %}
-{% if entertainment_posts.size > 0 %}
-{% for post in entertainment_posts %}
-- [{{ post.title }}]({{ post.url | relative_url }})
-{% endfor %}
-{% else %}
-*No posts yet in this domain.*
-{% endif %}
+  {% assign business_posts = site.posts | where: "analogy_domain", "business" %}
+  {% if business_posts.size > 0 %}
+  <a href="{{ '/domain/business/' | relative_url }}" class="domain-card">
+    <div class="domain-header">
+      <h3>Business</h3>
+      <span class="domain-count">{{ business_posts.size }}</span>
+    </div>
+    <ul class="domain-posts">
+      {% for post in business_posts limit:3 %}
+      <li>{{ post.title }}</li>
+      {% endfor %}
+    </ul>
+    {% if business_posts.size > 3 %}
+    <span class="domain-view-all">View all {{ business_posts.size }} posts →</span>
+    {% endif %}
+  </a>
+  {% endif %}
 
-### Library
-{% assign library_posts = site.posts | where: "analogy_domain", "library" %}
-{% if library_posts.size > 0 %}
-{% for post in library_posts %}
-- [{{ post.title }}]({{ post.url | relative_url }})
-{% endfor %}
-{% else %}
-*No posts yet in this domain.*
-{% endif %}
+  {% assign entertainment_posts = site.posts | where: "analogy_domain", "entertainment" %}
+  {% if entertainment_posts.size > 0 %}
+  <a href="{{ '/domain/entertainment/' | relative_url }}" class="domain-card">
+    <div class="domain-header">
+      <h3>Entertainment</h3>
+      <span class="domain-count">{{ entertainment_posts.size }}</span>
+    </div>
+    <ul class="domain-posts">
+      {% for post in entertainment_posts limit:3 %}
+      <li>{{ post.title }}</li>
+      {% endfor %}
+    </ul>
+    {% if entertainment_posts.size > 3 %}
+    <span class="domain-view-all">View all {{ entertainment_posts.size }} posts →</span>
+    {% endif %}
+  </a>
+  {% endif %}
 
-### Sports
-{% assign sports_posts = site.posts | where: "analogy_domain", "sports" %}
-{% if sports_posts.size > 0 %}
-{% for post in sports_posts %}
-- [{{ post.title }}]({{ post.url | relative_url }})
-{% endfor %}
-{% else %}
-*No posts yet in this domain.*
-{% endif %}
+  {% assign library_posts = site.posts | where: "analogy_domain", "library" %}
+  {% if library_posts.size > 0 %}
+  <a href="{{ '/domain/library/' | relative_url }}" class="domain-card">
+    <div class="domain-header">
+      <h3>Library</h3>
+      <span class="domain-count">{{ library_posts.size }}</span>
+    </div>
+    <ul class="domain-posts">
+      {% for post in library_posts limit:3 %}
+      <li>{{ post.title }}</li>
+      {% endfor %}
+    </ul>
+    {% if library_posts.size > 3 %}
+    <span class="domain-view-all">View all {{ library_posts.size }} posts →</span>
+    {% endif %}
+  </a>
+  {% endif %}
 
-### Music
-{% assign music_posts = site.posts | where: "analogy_domain", "music" %}
-{% if music_posts.size > 0 %}
-{% for post in music_posts %}
-- [{{ post.title }}]({{ post.url | relative_url }})
-{% endfor %}
-{% else %}
-*No posts yet in this domain.*
-{% endif %}
+  {% assign transportation_posts = site.posts | where: "analogy_domain", "transportation" %}
+  {% if transportation_posts.size > 0 %}
+  <a href="{{ '/domain/transportation/' | relative_url }}" class="domain-card">
+    <div class="domain-header">
+      <h3>Transportation</h3>
+      <span class="domain-count">{{ transportation_posts.size }}</span>
+    </div>
+    <ul class="domain-posts">
+      {% for post in transportation_posts limit:3 %}
+      <li>{{ post.title }}</li>
+      {% endfor %}
+    </ul>
+    {% if transportation_posts.size > 3 %}
+    <span class="domain-view-all">View all {{ transportation_posts.size }} posts →</span>
+    {% endif %}
+  </a>
+  {% endif %}
 
-### Architecture
-{% assign architecture_posts = site.posts | where: "analogy_domain", "architecture" %}
-{% if architecture_posts.size > 0 %}
-{% for post in architecture_posts %}
-- [{{ post.title }}]({{ post.url | relative_url }})
-{% endfor %}
-{% else %}
-*No posts yet in this domain.*
-{% endif %}
+  {% assign sports_posts = site.posts | where: "analogy_domain", "sports" %}
+  {% if sports_posts.size > 0 %}
+  <a href="{{ '/domain/sports/' | relative_url }}" class="domain-card">
+    <div class="domain-header">
+      <h3>Sports</h3>
+      <span class="domain-count">{{ sports_posts.size }}</span>
+    </div>
+    <ul class="domain-posts">
+      {% for post in sports_posts limit:3 %}
+      <li>{{ post.title }}</li>
+      {% endfor %}
+    </ul>
+    {% if sports_posts.size > 3 %}
+    <span class="domain-view-all">View all {{ sports_posts.size }} posts →</span>
+    {% endif %}
+  </a>
+  {% endif %}
 
-### Transportation
-{% assign transportation_posts = site.posts | where: "analogy_domain", "transportation" %}
-{% if transportation_posts.size > 0 %}
-{% for post in transportation_posts %}
-- [{{ post.title }}]({{ post.url | relative_url }})
-{% endfor %}
-{% else %}
-*No posts yet in this domain.*
-{% endif %}
+  {% assign music_posts = site.posts | where: "analogy_domain", "music" %}
+  {% if music_posts.size > 0 %}
+  <a href="{{ '/domain/music/' | relative_url }}" class="domain-card">
+    <div class="domain-header">
+      <h3>Music</h3>
+      <span class="domain-count">{{ music_posts.size }}</span>
+    </div>
+    <ul class="domain-posts">
+      {% for post in music_posts limit:3 %}
+      <li>{{ post.title }}</li>
+      {% endfor %}
+    </ul>
+    {% if music_posts.size > 3 %}
+    <span class="domain-view-all">View all {{ music_posts.size }} posts →</span>
+    {% endif %}
+  </a>
+  {% endif %}
 
----
-
-*More domains coming as the blog grows!*
+  {% assign architecture_posts = site.posts | where: "analogy_domain", "architecture" %}
+  {% if architecture_posts.size > 0 %}
+  <a href="{{ '/domain/architecture/' | relative_url }}" class="domain-card">
+    <div class="domain-header">
+      <h3>Architecture</h3>
+      <span class="domain-count">{{ architecture_posts.size }}</span>
+    </div>
+    <ul class="domain-posts">
+      {% for post in architecture_posts limit:3 %}
+      <li>{{ post.title }}</li>
+      {% endfor %}
+    </ul>
+    {% if architecture_posts.size > 3 %}
+    <span class="domain-view-all">View all {{ architecture_posts.size }} posts →</span>
+    {% endif %}
+  </a>
+  {% endif %}
+</div>

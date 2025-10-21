@@ -2,7 +2,7 @@
 layout: post
 title: "Deadlock vs Race Condition: Traffic Intersections and Parking Spots"
 date: 2025-10-20
-tags: [java, concurrency, multithreading, synchronization, debugging]
+tags: [java, concurrency]
 analogy_domain: "transportation"
 series: "java-concurrency"
 series_title: "Java Concurrency Fundamentals"

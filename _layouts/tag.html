@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="tag-page">
+  <header class="tag-page-header">
+    <h1>{{ page.title }}</h1>
+    <p class="tag-description">{{ page.description }}</p>
+  </header>
+
+  <div class="posts-list">
+    {% assign tag_posts = site.tags[page.tag] | sort: "date" | reverse %}
+
+    {% if tag_posts.size > 0 %}
+      {% for post in tag_posts %}
+        <article class="post-item">
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+          <div class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+            {% if post.series %}
+            <span class="post-series">Part of {{ post.series_title | default: post.series }}</span>
+            {% endif %}
+            {% if post.analogy_domain %}
+            <span class="post-domain">{{ post.analogy_domain | capitalize }} analogy</span>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    {% else %}
+      <p class="no-posts">No posts found with this tag yet. Check back soon!</p>
+    {% endif %}
+  </div>
+
+  <div class="tag-back">
+    <a href="{{ '/topics/' | relative_url }}">← Back to Topics</a>
+  </div>
+</div>

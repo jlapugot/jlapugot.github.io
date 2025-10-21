@@ -2,7 +2,7 @@
 layout: post
 title: "HashMap, ConcurrentHashMap, and Synchronized Maps: Movie Theater Seating Systems"
 date: 2025-10-20
-tags: [java, concurrency, collections, data-structures, performance]
+tags: [java, concurrency]
 analogy_domain: "entertainment"
 series: "java-concurrency"
 series_title: "Java Concurrency Fundamentals"

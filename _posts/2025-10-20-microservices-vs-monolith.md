@@ -2,7 +2,7 @@
 layout: post
 title: "Microservices vs Monolith: Food Court vs Single Restaurant"
 date: 2025-10-20
-tags: [system-design, architecture, microservices, monolith, scalability]
+tags: [system-design]
 analogy_domain: "cooking"
 series: "system-design"
 series_title: "System Design Fundamentals"
