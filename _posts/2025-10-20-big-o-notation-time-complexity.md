@@ -23,15 +23,53 @@ What does O(n²) mean? Why is O(log n) better than O(n)? How do you identify Big
 
 ## The Analogy
 
-**Think of finding a book in a library. The "n" = number of books. Big O = how search time grows:**
+**Imagine searching for a specific book in libraries of different sizes. "n" = number of books.**
 
-| Complexity | Library Task | Growth |
-|-----------|-------------|--------|
-| **O(1)** | Know exact shelf → grab it | Always instant |
-| **O(log n)** | Use card catalog (binary search) | 1M books = 20 steps |
-| **O(n)** | Walk through every aisle | 1M books = 1M checks |
-| **O(n log n)** | Organize library, then search | Efficient sorting |
-| **O(n²)** | Compare every book to every other | 1M books = 1 trillion checks |
+**O(1) = Knowing the exact location**
+
+Your friend says "Harry Potter is in the top-left corner of shelf 5."
+- 100 books? Go directly there. Done in 1 step.
+- 1 million books? Go directly there. Still 1 step.
+- 1 billion books? Go directly there. Still 1 step.
+
+Time doesn't change based on library size.
+
+**O(log n) = Binary search with a card catalog**
+
+Library has 1 million books organized alphabetically. You're searching for "Potter, Harry."
+- Check middle of catalog: "M" = too low
+- Check middle-right: "S" = too high
+- Check middle-left: "P" = found it!
+- Only ~20 steps for 1 million books (each step eliminates half the remaining books)
+
+**O(n) = Walking through every aisle**
+
+You want to find all books by Stephen King. No organization, just walk past every single book:
+- 1,000 books = 1,000 checks
+- 1,000,000 books = 1,000,000 checks
+- Time scales linearly with library size
+
+**O(n²) = Compare every book to every other book**
+
+You want to find duplicate copies (compare each book to all others):
+- 1,000 books = 1,000 × 1,000 = 1 million comparisons
+- 1,000,000 books = 1,000,000 × 1,000,000 = 1 trillion comparisons
+- Terrible. Avoid this in interviews.
+
+**O(n log n) = Sorting efficiently**
+
+You want to alphabetize 1 million books in the library. A naive approach would compare every book to every other (n²) which is 1 trillion comparisons.
+
+But smart sorting algorithms (like merge sort) do it differently:
+- Divide the books into smaller piles
+- Sort each pile individually
+- Merge the sorted piles back together
+
+Result:
+- 1,000 books = ~10,000 steps (1,000 × 10)
+- 1,000,000 books = ~20,000,000 steps (1,000,000 × 20)
+
+Much better than n² but slower than n. This is the sweet spot for sorting large datasets.
 
 ---
 

@@ -48,7 +48,7 @@
           <span>Is the same as docker-compose.yml</span>
         </label>
       </div>
-      <button class="quiz-btn-check" onclick="checkAnswer(event, 'docker-quiz', 2, 'A Dockerfile is a text file with step-by-step instructions to build an image. Example: FROM ubuntu, RUN apt-get install, COPY code, CMD [\"run app\"]. You build it with: docker build -t myapp:1.0 .')">Check Answer</button>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'docker-quiz', 2, 'A Dockerfile is a text file with step-by-step instructions to build an image. Example: FROM ubuntu, RUN apt-get install, COPY code, CMD run app. You build it with: docker build -t myapp:1.0 .')">Check Answer</button>
       <div class="quiz-feedback" id="feedback-docker-quiz-2" style="display: none;">
         <p class="quiz-feedback-text"></p>
         <p class="quiz-explanation"></p>
@@ -102,7 +102,7 @@
           <span>docker execute myapp:1.0</span>
         </label>
       </div>
-      <button class="quiz-btn-check" onclick="checkAnswer(event, 'docker-quiz', 4, '`docker run myapp:1.0` creates and starts a container from the image. You can add flags like `-p 8080:8080` for port mapping, `-v` for volumes, `-e` for environment variables.')">Check Answer</button>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'docker-quiz', 4, 'docker run myapp:1.0 creates and starts a container from the image. You can add flags like -p 8080:8080 for port mapping, -v for volumes, -e for environment variables.')">Check Answer</button>
       <div class="quiz-feedback" id="feedback-docker-quiz-4" style="display: none;">
         <p class="quiz-feedback-text"></p>
         <p class="quiz-explanation"></p>
