@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-volatile-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-volatile-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What does the volatile keyword guarantee?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-1" value="1" data-correct="true">
+          <span>Visibility: all threads see the latest value from main memory</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-1" value="2" data-correct="false">
+          <span>Atomicity: operations are indivisible</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-1" value="3" data-correct="false">
+          <span>Thread safety for all operations</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-1" value="4" data-correct="false">
+          <span>Faster performance than synchronized</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'volatile-quiz', 1, 'Volatile guarantees visibility. All threads read from and write to main memory, not thread-local caches. This ensures everyone sees the most recent value.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-volatile-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-volatile-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. What's wrong with this code?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-2" value="1" data-correct="true">
+          <span>counter++ is not atomic even with volatile</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-2" value="2" data-correct="false">
+          <span>Volatile doesn't work with integers</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-2" value="3" data-correct="false">
+          <span>It needs synchronized for visibility</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-4" value="4" data-correct="false">
+          <span>Nothing, this code is safe</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'volatile-quiz', 2, 'Volatile guarantees visibility but not atomicity. counter++ is three operations (read, increment, write). Two threads can increment simultaneously, causing lost updates. Use AtomicInteger instead.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-volatile-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-volatile-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. When should you use volatile?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-3" value="1" data-correct="true">
+          <span>For simple flags and status indicators</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-3" value="2" data-correct="false">
+          <span>For all concurrent operations</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-3" value="3" data-correct="false">
+          <span>For complex multi-step transactions</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-3" value="4" data-correct="false">
+          <span>Instead of synchronized methods</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'volatile-quiz', 3, 'Volatile is best for simple values like boolean shutdown flags. Use synchronized for complex operations and AtomicInteger for counters. Volatile ensures visibility without the overhead of locking.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-volatile-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-volatile-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. What problem does volatile solve?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-4" value="1" data-correct="false">
+          <span>Race conditions</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-4" value="2" data-correct="true">
+          <span>Visibility: threads seeing stale cached values</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-4" value="3" data-correct="false">
+          <span>Deadlocks</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-volatile-quiz-4" value="4" data-correct="false">
+          <span>Memory leaks</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'volatile-quiz', 4, 'Volatile solves the visibility problem where one thread changes a value but other threads do not see the change because they are reading from thread-local cache. Volatile forces reads and writes to main memory.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-volatile-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-volatile-quiz" onclick="prevQuestion('volatile-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-volatile-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-volatile-quiz" onclick="nextQuestion('volatile-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('volatile-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>
