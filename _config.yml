@@ -1,7 +1,7 @@
 # Site settings
 title: "Brackets & Blueprints"
-description: "Complex engineering concepts explained through powerful analogies. A technical blog for senior engineers covering Java, Spring, concurrency, system design, and more."
-tagline: "Master complex topics through simple analogies"
+description: "Ace your technical interviews with concise explanations of complex engineering concepts. Powerful analogies, comparison tables, and code examples. Interview-focused guides on Java, Spring, concurrency, system design, and algorithms."
+tagline: "Interview-focused guides through clear analogies"
 author: "Julius Lapugot"
 email: juliusclapugot@gmail.com
 url: "https://jlapugot.github.io"
