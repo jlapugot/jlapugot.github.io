@@ -145,6 +145,14 @@ public void transfer(BankAccount to, int amount) {
 
 ---
 
+## Test Your Knowledge
+
+{% include deadlock-race-quiz.html %}
+
+{% include quiz-script.html %}
+
+---
+
 ## TL;DR
 
 Race conditions cause wrong data (two threads corrupt the same value). Deadlocks cause hangs (threads wait for each other in a circle). Fix race conditions with synchronization/atomics. Fix deadlocks with consistent lock ordering. They need different solutions!

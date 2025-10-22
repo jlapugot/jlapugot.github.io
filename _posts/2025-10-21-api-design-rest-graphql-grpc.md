@@ -265,6 +265,14 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase {
 
 ---
 
+## Test Your Knowledge
+
+{% include api-design-quiz.html %}
+
+{% include quiz-script.html %}
+
+---
+
 ## TL;DR
 
 REST is like a department store - walk to aisles (endpoints) and get everything on the shelf (full responses). GraphQL is like a personal shopper - tell them exactly what you need, one trip, no wasted data. gRPC is like warehouse ordering - super fast binary protocol but only for internal use. Use REST for public APIs, GraphQL for mobile/complex data, gRPC for microservices. Most systems use all three.

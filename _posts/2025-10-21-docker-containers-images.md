@@ -216,6 +216,14 @@ docker run -v /home/user/data:/data myapp:1.0
 
 ---
 
+## Test Your Knowledge
+
+{% include docker-quiz.html %}
+
+{% include quiz-script.html %}
+
+---
+
 ## TL;DR
 
 Docker packages your app + all dependencies into an image. Run the image as containers. Everyone gets exact same environment. Solves "it works on my machine" problem. Use Dockerfile to define image. Use Docker Compose for multiple services. No more "but it works on my laptop!"

@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-spring-boot-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-spring-boot-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What does @SpringBootApplication do?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-1" value="1" data-correct="false">
+          <span>Only enables dependency injection</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-1" value="2" data-correct="true">
+          <span>Combines @Configuration, @ComponentScan, and @EnableAutoConfiguration</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-1" value="3" data-correct="false">
+          <span>Creates an embedded database automatically</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-1" value="4" data-correct="false">
+          <span>Requires external Tomcat server</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'spring-boot-quiz', 1, '@SpringBootApplication is a meta-annotation that combines three annotations: @Configuration (bean definition), @ComponentScan (finds components), and @EnableAutoConfiguration (auto-configures the app based on classpath dependencies).')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-spring-boot-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-spring-boot-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. What are Spring Boot Starters?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-2" value="1" data-correct="true">
+          <span>Pre-packaged dependency sets that simplify Maven/Gradle configuration</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-2" value="2" data-correct="false">
+          <span>Configuration files that must be created manually</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-2" value="3" data-correct="false">
+          <span>Classes that extend SpringBootApplication</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-2" value="4" data-correct="false">
+          <span>Development tools only, not for production</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'spring-boot-quiz', 2, 'Starters are convenient dependency descriptors that simplify Maven/Gradle configuration. Instead of adding 10 individual dependencies, you add one starter like spring-boot-starter-web which includes Spring MVC, Tomcat, Jackson, etc.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-spring-boot-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-spring-boot-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. What is auto-configuration in Spring Boot?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-3" value="1" data-correct="true">
+          <span>Spring Boot detects classpath dependencies and configures beans automatically</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-3" value="2" data-correct="false">
+          <span>Users must manually specify every bean configuration</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-3" value="3" data-correct="false">
+          <span>A feature that only works with external servers</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-3" value="4" data-correct="false">
+          <span>Automatic code generation for REST endpoints</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'spring-boot-quiz', 3, 'Auto-configuration is magic. Spring Boot looks at the classpath and auto-configures beans based on what libraries are present. For example, if spring-boot-starter-data-jpa is present, it auto-configures DataSource, EntityManagerFactory, and TransactionManager.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-spring-boot-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-spring-boot-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. What is the main advantage of Spring Boot over Spring Framework?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-4" value="1" data-correct="false">
+          <span>Spring Boot is faster in performance</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-4" value="2" data-correct="true">
+          <span>Eliminates boilerplate configuration with sensible defaults</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-4" value="3" data-correct="false">
+          <span>Spring Boot requires less Java knowledge</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-boot-quiz-4" value="4" data-correct="false">
+          <span>Spring Boot doesn't need Maven or Gradle</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'spring-boot-quiz', 4, 'Spring Boot's main advantage is eliminating boilerplate. Instead of hundreds of lines of XML configuration in Spring Framework, Spring Boot provides sensible defaults and auto-configuration, letting you start coding immediately.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-spring-boot-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-spring-boot-quiz" onclick="prevQuestion('spring-boot-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-spring-boot-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-spring-boot-quiz" onclick="nextQuestion('spring-boot-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('spring-boot-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>

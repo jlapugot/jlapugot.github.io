@@ -144,6 +144,14 @@ for (int i = 0; i < arr1.length; i++)
 
 ---
 
+## Test Your Knowledge
+
+{% include big-o-quiz.html %}
+
+{% include quiz-script.html %}
+
+---
+
 ## Real Interview Example
 
 ```java

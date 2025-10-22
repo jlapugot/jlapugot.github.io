@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-hashmap-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-hashmap-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. You have multiple threads accessing a map. Which should you use for the best performance?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-1" value="1" data-correct="false">
+          <span>HashMap</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-1" value="2" data-correct="false">
+          <span>Synchronized Map</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-1" value="3" data-correct="true">
+          <span>ConcurrentHashMap</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-1" value="4" data-correct="false">
+          <span>Collections.synchronizedList()</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'hashmap-quiz', 1, 'ConcurrentHashMap provides both thread-safety and high performance through lock striping. HashMap is not thread-safe, and Synchronized Map locks the entire map on each operation.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-hashmap-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-hashmap-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. What is the main performance problem with Synchronized Map?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-2" value="1" data-correct="false">
+          <span>It doesn't support null values</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-2" value="2" data-correct="true">
+          <span>It locks the entire map on every operation</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-2" value="3" data-correct="false">
+          <span>It uses more memory than HashMap</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-2" value="4" data-correct="false">
+          <span>It doesn't allow concurrent reads</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'hashmap-quiz', 2, 'Synchronized Map uses a single lock for the entire map. This means all threads wait, even when accessing different keys. ConcurrentHashMap solves this with multiple locks (lock striping).')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-hashmap-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-hashmap-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. Which of these allows null values?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-3" value="1" data-correct="false">
+          <span>HashMap only</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-3" value="2" data-correct="false">
+          <span>ConcurrentHashMap only</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-3" value="3" data-correct="true">
+          <span>Both HashMap and Synchronized Map</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-3" value="4" data-correct="false">
+          <span>None of them</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'hashmap-quiz', 3, 'Both HashMap and Synchronized Map allow null keys and values. ConcurrentHashMap does not allow null values because null is used as a signal value in concurrent operations.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-hashmap-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-hashmap-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. What locking strategy does ConcurrentHashMap use?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-4" value="1" data-correct="false">
+          <span>Single lock for the entire map</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-4" value="2" data-correct="true">
+          <span>Lock striping - multiple locks for different segments</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-4" value="3" data-correct="false">
+          <span>No locks, uses atomic operations only</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-hashmap-quiz-4" value="4" data-correct="false">
+          <span>Read-write locks</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'hashmap-quiz', 4, 'ConcurrentHashMap divides the map into segments (or buckets in newer versions), each with its own lock. This allows multiple threads to update different segments simultaneously.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-hashmap-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-hashmap-quiz" onclick="prevQuestion('hashmap-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-hashmap-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-hashmap-quiz" onclick="nextQuestion('hashmap-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('hashmap-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>

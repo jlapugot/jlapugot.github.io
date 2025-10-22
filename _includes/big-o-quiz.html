@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-big-o-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-big-o-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What does O(1) mean?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-1" value="1" data-correct="true">
+          <span>Constant time - same regardless of input size</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-1" value="2" data-correct="false">
+          <span>One operation maximum</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-1" value="3" data-correct="false">
+          <span>Linear time proportional to input</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-1" value="4" data-correct="false">
+          <span>Time increases logarithmically</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'big-o-quiz', 1, 'O(1) means constant time. Whether you have 10 items or 10 million items, the operation takes the same time. Examples: HashMap.get(), array access by index.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-big-o-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-big-o-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. What does O(log n) mean?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-2" value="1" data-correct="false">
+          <span>Constant time</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-2" value="2" data-correct="true">
+          <span>Time grows very slowly as input doubles</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-2" value="3" data-correct="false">
+          <span>Time grows linearly with input</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-2" value="4" data-correct="false">
+          <span>Time is proportional to the square of input</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'big-o-quiz', 2, 'O(log n) means logarithmic time. It grows very slowly. Binary search on 1 million items only needs about 20 steps. When input doubles, you only add one more step.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-big-o-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-big-o-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. When identifying Big O complexity, what should you do with constants?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-3" value="1" data-correct="false">
+          <span>Keep them in your answer</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-3" value="2" data-correct="true">
+          <span>Drop them - O(2n) simplifies to O(n)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-3" value="3" data-correct="false">
+          <span>Add them to the big O notation</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-3" value="4" data-correct="false">
+          <span>Constants don't affect complexity</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'big-o-quiz', 3, 'You drop constant multipliers because Big O is about growth rate, not absolute time. O(2n), O(3n), and O(100n) all simplify to O(n) because the growth pattern is linear regardless of the constant.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-big-o-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-big-o-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. What is the Big O of this code with nested loops where both loop n times?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-4" value="1" data-correct="false">
+          <span>O(n)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-4" value="2" data-correct="true">
+          <span>O(n²)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-4" value="3" data-correct="false">
+          <span>O(2n)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-big-o-quiz-4" value="4" data-correct="false">
+          <span>O(log n)</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'big-o-quiz', 4, 'Nested loops multiply their complexities. If outer loop runs n times and inner loop runs n times for each iteration, that is n * n = n² operations. With 1,000 items, that is 1 million comparisons.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-big-o-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-big-o-quiz" onclick="prevQuestion('big-o-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-big-o-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-big-o-quiz" onclick="nextQuestion('big-o-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('big-o-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>

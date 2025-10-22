@@ -143,6 +143,14 @@ writeToAnyAvailableReplica();
 
 ---
 
+## Test Your Knowledge
+
+{% include cap-theorem-quiz.html %}
+
+{% include quiz-script.html %}
+
+---
+
 ## PACELC Extension
 
 **If Partition → choose AP or CP**

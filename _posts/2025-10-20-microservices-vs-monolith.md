@@ -226,6 +226,14 @@ Each module is independent. Later, extract to microservices if needed.
 
 ---
 
+## Test Your Knowledge
+
+{% include microservices-quiz.html %}
+
+{% include quiz-script.html %}
+
+---
+
 ## TL;DR
 
 Monolith: One app, one database, simple start, complex at scale. Microservices: Multiple independent services, complex start, easy to scale. Start monolithic. When you have scaling problems with specific components or multiple independent teams, migrate to microservices. Most systems don't need microservices until they're much larger.

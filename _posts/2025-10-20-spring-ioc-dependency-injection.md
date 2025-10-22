@@ -110,6 +110,14 @@ public class OrderService {
 
 ---
 
+## Test Your Knowledge
+
+{% include spring-ioc-quiz.html %}
+
+{% include quiz-script.html %}
+
+---
+
 ## TL;DR
 
 IoC is the principle (framework controls flow). DI is how it works (dependencies are injected). Use constructor injection. Let Spring manage the complexity.

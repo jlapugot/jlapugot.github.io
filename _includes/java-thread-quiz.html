@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-java-thread-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-java-thread-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What's the difference between calling t.run() and t.start()?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-1" value="1" data-correct="false">
+          <span>They do the same thing</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-1" value="2" data-correct="true">
+          <span>run() executes in current thread, start() creates a new thread</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-1" value="3" data-correct="false">
+          <span>start() runs faster than run()</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-1" value="4" data-correct="false">
+          <span>run() is for Runnable, start() is for Thread</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'java-thread-quiz', 1, 'Calling run() directly executes it in the current thread (main thread). Calling start() creates a new thread and calls run() in that new thread. You must call start() to run code in parallel.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-java-thread-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-java-thread-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. What does t.join() do?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-2" value="1" data-correct="true">
+          <span>Wait for thread t to finish before continuing</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-2" value="2" data-correct="false">
+          <span>Pause the thread t temporarily</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-2" value="3" data-correct="false">
+          <span>Combine two threads into one</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-2" value="4" data-correct="false">
+          <span>Interrupt the thread</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'java-thread-quiz', 2, 'join() blocks the current thread (usually main) until thread t completes execution. It's used when you need to wait for a thread to finish before proceeding.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-java-thread-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-java-thread-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. Why should you use thread pools instead of creating threads manually?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-3" value="1" data-correct="false">
+          <span>Threads created in pools run faster</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-3" value="2" data-correct="true">
+          <span>Reuse threads, prevent resource exhaustion, automatic queue management</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-3" value="3" data-correct="false">
+          <span>It's just a naming convention</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-3" value="4" data-correct="false">
+          <span>Thread pools are only for web servers</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'java-thread-quiz', 3, 'Thread pools (ExecutorService) reuse threads instead of creating/destroying them for each task (expensive). They also limit the number of threads running simultaneously, preventing your application from running out of memory or resources.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-java-thread-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-java-thread-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. What's the correct way to create a thread pool with 10 threads?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-4" value="1" data-correct="false">
+          <span>new Thread[10]</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-4" value="2" data-correct="true">
+          <span>Executors.newFixedThreadPool(10)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-4" value="3" data-correct="false">
+          <span>ExecutorService pool = new ExecutorService(10)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-java-thread-quiz-4" value="4" data-correct="false">
+          <span>ThreadPool pool = new ThreadPool(10)</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'java-thread-quiz', 4, 'Executors.newFixedThreadPool(10) creates an ExecutorService with a fixed pool of 10 reusable threads. This is the correct way to create a thread pool for production code.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-java-thread-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-java-thread-quiz" onclick="prevQuestion('java-thread-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-java-thread-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-java-thread-quiz" onclick="nextQuestion('java-thread-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('java-thread-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>

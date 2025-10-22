@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-microservices-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-microservices-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What's the main difference between monolith and microservices?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-1" value="1" data-correct="true">
+          <span>Monolith is one app, microservices are independent services communicating via APIs</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-1" value="2" data-correct="false">
+          <span>Monolith is old, microservices are modern</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-1" value="3" data-correct="false">
+          <span>Microservices only work with cloud platforms</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-1" value="4" data-correct="false">
+          <span>They're the same thing with different names</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'microservices-quiz', 1, 'Monolith is a single application with all features in one codebase. Microservices split the app into independent services that communicate via REST/message queues. Each service has its own database and can be deployed independently.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-microservices-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-microservices-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. When should you use microservices instead of monolith?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-2" value="1" data-correct="false">
+          <span>Always use microservices from day 1</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-2" value="2" data-correct="true">
+          <span>When app is large, has independent scaling needs, or large teams</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-2" value="3" data-correct="false">
+          <span>Only when using cloud platforms like AWS</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-2" value="4" data-correct="false">
+          <span>When you have only one developer</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'microservices-quiz', 2, 'Microservices add complexity. Use them when you have scaling challenges (specific services need more resources), large teams (each team owns a service), or need to deploy independently. Start with monolith, migrate to microservices when needed.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-microservices-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-microservices-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. In microservices, each service should have:</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-3" value="1" data-correct="false">
+          <span>Access to the central shared database</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-3" value="2" data-correct="true">
+          <span>Its own database (database per service pattern)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-3" value="3" data-correct="false">
+          <span>No database, only in-memory caching</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-4" value="4" data-correct="false">
+          <span>A backup database in case of failure</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'microservices-quiz', 3, 'Database per service pattern: each microservice has its own database. This prevents tight coupling and allows services to be deployed independently. However, it makes transactions and consistency harder (distributed system challenges).')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-microservices-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-microservices-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. What's a key weakness of microservices?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-4" value="1" data-correct="false">
+          <span>They're too slow</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-4" value="2" data-correct="true">
+          <span>Distributed system complexity - harder to test, debug, and maintain consistency</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-4" value="3" data-correct="false">
+          <span>They require more developers</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-microservices-quiz-4" value="4" data-correct="false">
+          <span>They don't scale as well as monoliths</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'microservices-quiz', 4, 'Microservices introduce distributed system complexity. Testing becomes harder (requires integration testing across services), debugging is tougher (requests span multiple services), and maintaining data consistency becomes a nightmare (distributed transactions are complex).')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-microservices-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-microservices-quiz" onclick="prevQuestion('microservices-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-microservices-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-microservices-quiz" onclick="nextQuestion('microservices-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('microservices-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>

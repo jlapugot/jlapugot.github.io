@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-api-design-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-api-design-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What is a main problem with REST APIs?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-1" value="1" data-correct="true">
+          <span>Over-fetching: you get data you don't need</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-1" value="2" data-correct="false">
+          <span>Too fast, hard to debug</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-1" value="3" data-correct="false">
+          <span>Doesn't work with JSON</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-1" value="4" data-correct="false">
+          <span>Only works with HTTP</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'api-design-quiz', 1, 'REST returns fixed response shapes. If you only need name and email, but the endpoint returns id, name, email, avatar, followers, you are wasting bandwidth (over-fetching). GraphQL solves this by letting you ask for exactly what you need.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-api-design-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-api-design-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. What's the main advantage of GraphQL?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-2" value="1" data-correct="false">
+          <span>It's easier than REST</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-2" value="2" data-correct="true">
+          <span>You ask for exactly what you need, nothing more, nothing less</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-2" value="3" data-correct="false">
+          <span>It's faster for all use cases</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-2" value="4" data-correct="false">
+          <span>It replaces REST completely</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'api-design-quiz', 2, 'GraphQL lets you specify exactly what fields you need. One query gets user.name, user.email, and user.posts[0..5].title - no over-fetching (extra data), no under-fetching (multiple requests). Super efficient for mobile.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-api-design-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-api-design-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. When should you use gRPC?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-3" value="1" data-correct="false">
+          <span>For public APIs that users call</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-3" value="2" data-correct="true">
+          <span>For internal communication between microservices</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-3" value="3" data-correct="false">
+          <span>For mobile applications</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-3" value="4" data-correct="false">
+          <span>When you want simplicity</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'api-design-quiz', 3, 'gRPC is for internal service-to-service communication. It is binary, not human-readable, and has limited browser support. Perfect for microservices talking to each other, not for public APIs.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-api-design-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-api-design-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. Which API style has the smallest payload size?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-4" value="1" data-correct="false">
+          <span>REST</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-4" value="2" data-correct="false">
+          <span>GraphQL</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-4" value="3" data-correct="true">
+          <span>gRPC (about 7x smaller than JSON)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-api-design-quiz-4" value="4" data-correct="false">
+          <span>They're all the same</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'api-design-quiz', 4, 'gRPC uses binary protocol (Protobuf) which is about 7x smaller than JSON payloads. REST sends JSON (text). GraphQL also sends JSON but you only get what you ask for. gRPC is the most compact.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-api-design-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-api-design-quiz" onclick="prevQuestion('api-design-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-api-design-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-api-design-quiz" onclick="nextQuestion('api-design-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('api-design-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>

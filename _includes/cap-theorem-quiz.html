@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-cap-theorem-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-cap-theorem-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What does CAP Theorem state?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-1" value="1" data-correct="true">
+          <span>Distributed systems can have at most 2 of 3: Consistency, Availability, Partition Tolerance</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-1" value="2" data-correct="false">
+          <span>All distributed systems must have all three</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-1" value="3" data-correct="false">
+          <span>You can pick which 3 features you want</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-1" value="4" data-correct="false">
+          <span>It's not applicable to modern systems</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'cap-theorem-quiz', 1, 'CAP Theorem: you can have 2 of 3. Consistency (all reads see same data), Availability (always responding), Partition Tolerance (works when network splits). Networks fail, so you choose between CP (strong consistency) or AP (eventual consistency).')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-cap-theorem-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-cap-theorem-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. What is a CP system?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-2" value="1" data-correct="true">
+          <span>Prioritizes Consistency over Availability, rejects requests during network failures</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-2" value="2" data-correct="false">
+          <span>Both Consistency and Partition tolerance with perfect networks</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-2" value="3" data-correct="false">
+          <span>Always available even with data inconsistencies</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-2" value="4" data-correct="false">
+          <span>Customer-Priority system</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'cap-theorem-quiz', 2, 'CP (Consistency + Partition Tolerance): When network partitions, reject requests to keep data consistent. Example: Banks - they cannot risk wrong balances. Downtime is better than data corruption.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-cap-theorem-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-cap-theorem-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. What is an AP system?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-3" value="1" data-correct="true">
+          <span>Prioritizes Availability, accepts requests even if data becomes temporarily inconsistent</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-3" value="2" data-correct="false">
+          <span>Always prioritizes partition tolerance</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-3" value="3" data-correct="false">
+          <span>Requires perfect network conditions</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-3" value="4" data-correct="false">
+          <span>Application Programming system</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'cap-theorem-quiz', 3, 'AP (Availability + Partition Tolerance): Accept requests during network partition. Data becomes inconsistent (eventual consistency). Example: Social media - showing stale likes is OK, but rejecting posts is not.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-cap-theorem-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-cap-theorem-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. Why can't you have all three (CAP)?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-4" value="1" data-correct="false">
+          <span>Technology isn't advanced enough yet</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-4" value="2" data-correct="true">
+          <span>Network partitions happen, so you must choose between C and A</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-4" value="3" data-correct="false">
+          <span>It's too expensive to implement</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-cap-theorem-quiz-4" value="4" data-correct="false">
+          <span>It's a mathematical limitation we haven't solved</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'cap-theorem-quiz', 4, 'When network partition happens (guaranteed), you MUST choose: (C) reject requests and stay consistent, or (A) accept requests and become inconsistent. You cannot do both. That is why networks failing forces a choice.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-cap-theorem-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-cap-theorem-quiz" onclick="prevQuestion('cap-theorem-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-cap-theorem-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-cap-theorem-quiz" onclick="nextQuestion('cap-theorem-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('cap-theorem-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-spring-ioc-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-spring-ioc-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What is Inversion of Control (IoC)?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-1" value="1" data-correct="false">
+          <span>A way to create Spring beans</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-1" value="2" data-correct="true">
+          <span>The framework controls your code flow instead of your code controlling the framework</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-1" value="3" data-correct="false">
+          <span>A method of dependency injection</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-1" value="4" data-correct="false">
+          <span>The process of creating new objects</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'spring-ioc-quiz', 1, 'IoC is a principle where the framework (like Spring) controls the flow of your program, not the other way around. Instead of your code controlling when things happen, the framework calls your code when needed.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-spring-ioc-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-spring-ioc-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. What is the difference between IoC and Dependency Injection?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-2" value="1" data-correct="true">
+          <span>IoC is the principle, DI is how the principle is implemented</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-2" value="2" data-correct="false">
+          <span>They are the exact same thing</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-2" value="3" data-correct="false">
+          <span>DI is for Spring, IoC is for Java</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-2" value="4" data-correct="false">
+          <span>IoC requires DI, but DI doesn't require IoC</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'spring-ioc-quiz', 2, 'IoC is the broad principle that the framework controls flow. Dependency Injection is one specific way to implement IoC - by injecting dependencies into your objects rather than having the object create them itself.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-spring-ioc-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-spring-ioc-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. Which injection method is recommended in production code?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-3" value="1" data-correct="true">
+          <span>Constructor injection</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-3" value="2" data-correct="false">
+          <span>Field injection with @Autowired</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-3" value="3" data-correct="false">
+          <span>Setter injection</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-3" value="4" data-correct="false">
+          <span>Manual instantiation with new</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'spring-ioc-quiz', 3, 'Constructor injection is recommended because it makes dependencies explicit, allows for immutable fields, and makes it easy to test (you can pass mock dependencies in the constructor). Field injection should be avoided in production code.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-spring-ioc-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-spring-ioc-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. What is Spring's IoC container called?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-4" value="1" data-correct="false">
+          <span>BeanFactory only</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-4" value="2" data-correct="true">
+          <span>ApplicationContext (extends BeanFactory)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-4" value="3" data-correct="false">
+          <span>SpringContext</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-spring-ioc-quiz-4" value="4" data-correct="false">
+          <span>ServiceContainer</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'spring-ioc-quiz', 4, 'Spring uses ApplicationContext as its main IoC container. It extends BeanFactory and provides additional features like event publication and internationalization. ApplicationContext is responsible for creating, configuring, and managing beans.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-spring-ioc-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-spring-ioc-quiz" onclick="prevQuestion('spring-ioc-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-spring-ioc-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-spring-ioc-quiz" onclick="nextQuestion('spring-ioc-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('spring-ioc-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>

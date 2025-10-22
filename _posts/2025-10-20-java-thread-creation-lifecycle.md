@@ -184,6 +184,14 @@ for (Future<Integer> future : futures) {
 
 ---
 
+## Test Your Knowledge
+
+{% include java-thread-quiz.html %}
+
+{% include quiz-script.html %}
+
+---
+
 ## TL;DR
 
 Create threads using `new Thread(() -> {}).start()`. Use thread pools (ExecutorService) for production. Never manually create 1000 threads - use `newFixedThreadPool(50)` instead. Always call `start()`, not `run()`. Use `join()` to wait for threads to finish. Let the framework manage complexity.

@@ -110,6 +110,14 @@ map.get("G5");           // Doesn't need to wait - lock-free reads
 
 ---
 
+## Test Your Knowledge
+
+{% include hashmap-quiz.html %}
+
+{% include quiz-script.html %}
+
+---
+
 ## TL;DR
 
 Use **ConcurrentHashMap** for multi-threaded code. It's both safe and fast. Use **Synchronized Map** only if you must have null support or are adding thread-safety to existing HashMap code. Never use **HashMap** in concurrent code - it can deadlock or corrupt data.

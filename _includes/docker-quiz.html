@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-docker-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-docker-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What's the difference between a Docker image and a container?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-1" value="1" data-correct="true">
+          <span>Image is a blueprint, container is a running instance</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-1" value="2" data-correct="false">
+          <span>They're the same thing</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-1" value="3" data-correct="false">
+          <span>Image runs on Linux, container runs on Windows</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-1" value="4" data-correct="false">
+          <span>Container is stored in Docker Hub, image is local</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'docker-quiz', 1, 'Docker image is the blueprint/template (immutable). Docker container is a running instance of that image (mutable but throwaway). Image = source code, container = running process.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-docker-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-docker-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. What does a Dockerfile do?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-2" value="1" data-correct="true">
+          <span>Contains instructions to build a Docker image</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-2" value="2" data-correct="false">
+          <span>Runs a container</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-2" value="3" data-correct="false">
+          <span>Stores Docker credentials</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-2" value="4" data-correct="false">
+          <span>Is the same as docker-compose.yml</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'docker-quiz', 2, 'A Dockerfile is a text file with step-by-step instructions to build an image. Example: FROM ubuntu, RUN apt-get install, COPY code, CMD [\"run app\"]. You build it with: docker build -t myapp:1.0 .')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-docker-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-docker-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. What problem does Docker solve?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-3" value="1" data-correct="true">
+          <span>"It works on my machine" - ensures same environment everywhere</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-3" value="2" data-correct="false">
+          <span>Makes applications run faster</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-3" value="3" data-correct="false">
+          <span>Reduces file sizes</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-3" value="4" data-correct="false">
+          <span>Eliminates the need for testing</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'docker-quiz', 3, 'Docker solves environment inconsistency. Your app works on your laptop but fails in production due to different OS/libraries. Docker packages everything: app, dependencies, libraries, OS. Same image = same behavior everywhere.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-docker-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-docker-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. How do you run a Docker container from an image?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-4" value="1" data-correct="false">
+          <span>docker build -t myapp:1.0 .</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-4" value="2" data-correct="true">
+          <span>docker run myapp:1.0</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-4" value="3" data-correct="false">
+          <span>docker start myapp:1.0</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-docker-quiz-4" value="4" data-correct="false">
+          <span>docker execute myapp:1.0</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'docker-quiz', 4, '`docker run myapp:1.0` creates and starts a container from the image. You can add flags like `-p 8080:8080` for port mapping, `-v` for volumes, `-e` for environment variables.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-docker-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-docker-quiz" onclick="prevQuestion('docker-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-docker-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-docker-quiz" onclick="nextQuestion('docker-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('docker-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>

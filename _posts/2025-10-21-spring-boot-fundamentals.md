@@ -234,6 +234,14 @@ GET /actuator/beans       → All beans in context
 
 ---
 
+## Test Your Knowledge
+
+{% include spring-boot-quiz.html %}
+
+{% include quiz-script.html %}
+
+---
+
 ## TL;DR
 
 Spring Boot is Spring Framework with sensible defaults and zero configuration. Add `@SpringBootApplication`, put dependencies in pom.xml, and Spring Boot auto-configures everything. Use starters instead of individual dependencies. Run as JAR with embedded Tomcat. Perfect for interviews and production. Never choose Spring Framework over Spring Boot unless you have a very specific reason.
