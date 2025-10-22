@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-# About Brackets & Blueprints
+# About Brackets & Basics
 
 ## The Philosophy
 

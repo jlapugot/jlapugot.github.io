@@ -1,4 +1,4 @@
-# Brackets & Blueprints
+# Brackets & Basics
 
 > Ace technical interviews with clear explanations and powerful analogies
 

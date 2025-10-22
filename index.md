@@ -3,7 +3,7 @@ layout: home
 title: Home
 ---
 
-# Prepare for Technical Interviews with Clarity
+# Brackets & Basics: Interview-Ready Fundamentals
 
 > *"If you can't explain it simply, you don't understand it well enough."*
 
