@@ -8,30 +8,32 @@ permalink: /about/
 
 ## The Philosophy
 
-The best engineers aren't just those who can build complex systems—they're the ones who can explain them simply. This blog is dedicated to that craft.
+**Preparing for a technical interview?** This blog is designed for you.
 
-Every post here takes a complex technical concept and explains it through a powerful analogy. Not because the concepts are "too hard" for direct explanation, but because analogies reveal deeper understanding. When you truly master something, you can see its patterns everywhere.
+Every post takes a complex technical concept and explains it through a powerful analogy, then distills it into the essential knowledge you need. Not fluff, just the core concepts, comparison points, and talking points that matter in interviews.
+
+When you truly master something, you can explain it simply. These posts are proof you understand it.
 
 ## Why This Matters
 
-As a senior engineer, you'll find yourself:
-- Mentoring junior developers
-- Explaining architectural decisions to stakeholders
-- Debugging your own mental models
-- Teaching at conferences or writing documentation
+Technical interviews aren't about memorizing facts, they're about demonstrating understanding. You need to:
+- Explain concepts clearly and concisely
+- Compare trade-offs with confidence
+- Know when and how to apply your knowledge
+- Back up your answers with code examples
 
-In all these scenarios, the ability to simplify is as valuable as the ability to build.
+This blog gives you exactly that: concise, clear explanations paired with the comparisons and code you need to discuss in interviews.
 
 ## The Format
 
-Each post follows a structured approach:
+Each post is **interview-focused and concise** (5-10 minutes read time):
 
 1. **The Problem** - What makes this concept confusing?
 2. **The Analogy** - A relatable comparison from everyday life
-3. **The Mapping** - Explicit connections between analogy and reality
-4. **Technical Deep Dive** - Now that you have intuition, here are the details
-5. **Where It Breaks Down** - Honest limitations of the analogy
-6. **Practical Application** - When and how to use this knowledge
+3. **Quick Comparison** - Side-by-side comparison table
+4. **Code Examples** - Practical, minimal code snippets
+5. **When to Use** - Clear guidance on when and how to apply this
+6. **Key Interview Points** - The talking points you need to know
 
 ## About Me
 
