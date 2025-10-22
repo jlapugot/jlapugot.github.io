@@ -1,8 +1,8 @@
 # Brackets & Blueprints
 
-> Complex engineering concepts explained through powerful analogies
+> Ace technical interviews with clear explanations and powerful analogies
 
-A technical blog focused on simplifying complex software engineering topics using relatable analogies. Because the ability to explain is as important as the ability to build.
+An interview-focused technical blog for understanding complex software engineering concepts. Concise guides (5-10 minutes each) with analogies, comparison tables, code examples, and key talking points. Perfect for interview prep.
 
 ## Local Development
 
@@ -30,13 +30,13 @@ bundle exec jekyll serve
    - `analogy_domain`: The source of your analogy (cooking, sports, etc.)
    - `related_concepts`: Links to related topics
 
-3. Follow the structure:
+3. Follow the interview-focused structure:
    - The Problem
    - The Analogy
-   - How It Maps
-   - Technical Deep Dive
-   - Where the Analogy Breaks Down
-   - When to Use This Pattern
+   - Quick Comparison (table)
+   - Code Examples
+   - When to Use
+   - Key Interview Points
    - TL;DR
 
 ## Project Structure
@@ -71,10 +71,11 @@ bundle exec jekyll serve
 
 - Start with the problem, not the solution
 - Use concrete, relatable analogies
-- Be explicit about mappings
-- Acknowledge where analogies break down
-- Include practical examples
-- Keep it concise but complete
+- Compare and contrast clearly (use tables)
+- Include minimal but practical code examples
+- Focus on interview-relevant talking points
+- Keep it concise: 5-10 minutes read time
+- No fluff, just essential knowledge
 
 ## Deployment
 
