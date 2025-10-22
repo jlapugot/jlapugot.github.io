@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-load-balancing-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-load-balancing-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What is the main problem that load balancing solves?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-1" value="1" data-correct="true">
+          <span>A single server becoming a bottleneck under high traffic</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-1" value="2" data-correct="false">
+          <span>Making servers run faster</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-1" value="3" data-correct="false">
+          <span>Preventing database failures</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-1" value="4" data-correct="false">
+          <span>Reducing server costs</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'load-balancing-quiz', 1, 'Load balancing distributes incoming requests across multiple servers so no single server becomes overwhelmed. This enables horizontal scaling.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-load-balancing-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-load-balancing-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. When should you use Least Connections strategy?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-2" value="1" data-correct="false">
+          <span>When all servers have equal capacity</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-2" value="2" data-correct="true">
+          <span>When request processing times vary and you need adaptive balancing</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-2" value="3" data-correct="false">
+          <span>When you need sticky sessions</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-2" value="4" data-correct="false">
+          <span>When simplicity is the priority</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'load-balancing-quiz', 2, 'Least connections strategy routes new requests to the server with the fewest active connections. This is best when request processing times vary and some requests take much longer than others.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-load-balancing-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-load-balancing-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. What is IP Hash (sticky sessions) used for?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-3" value="1" data-correct="false">
+          <span>To encrypt network traffic</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-3" value="2" data-correct="true">
+          <span>To route the same client to the same server, preserving session state</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-3" value="3" data-correct="false">
+          <span>To improve server performance</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-3" value="4" data-correct="false">
+          <span>To detect server failures</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'load-balancing-quiz', 3, 'IP hash ensures that requests from the same client IP always go to the same backend server. This preserves session data and cached information on that server. Trade-off: may cause uneven load distribution.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-load-balancing-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-load-balancing-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. What does a health check do in load balancing?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-4" value="1" data-correct="true">
+          <span>Detects dead servers and removes them from the request pool</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-4" value="2" data-correct="false">
+          <span>Ensures all servers have the same amount of load</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-4" value="3" data-correct="false">
+          <span>Optimizes the load balancing algorithm</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-load-balancing-quiz-4" value="4" data-correct="false">
+          <span>Prevents DDoS attacks</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'load-balancing-quiz', 4, 'Health checks periodically ping each server to verify it is healthy and responding. If a server fails a health check, the load balancer automatically stops sending it traffic and notifies operations teams.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-load-balancing-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-load-balancing-quiz" onclick="prevQuestion('load-balancing-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-load-balancing-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-load-balancing-quiz" onclick="nextQuestion('load-balancing-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('load-balancing-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>
