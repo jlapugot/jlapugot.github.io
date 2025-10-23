@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-caching-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-caching-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What does LRU (Least Recently Used) evict?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-1" value="1" data-correct="true">
+          <span>The item that was accessed longest ago</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-1" value="2" data-correct="false">
+          <span>The item that uses the most memory</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-1" value="3" data-correct="false">
+          <span>The item that was added first</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-1" value="4" data-correct="false">
+          <span>A random item</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'caching-quiz', 1, 'LRU evicts the least recently used item. If item A was accessed 1 hour ago and item B was accessed 1 minute ago, LRU removes A. This optimizes for frequently accessed data.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-caching-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-caching-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. What is TTL (Time To Live) used for?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-2" value="1" data-correct="false">
+          <span>To measure cache hit rate</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-2" value="2" data-correct="true">
+          <span>To expire data after a fixed time period</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-2" value="3" data-correct="false">
+          <span>To encrypt cached data</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-2" value="4" data-correct="false">
+          <span>To limit the number of cache entries</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'caching-quiz', 2, 'TTL sets an expiration time on cached data. After TTL expires, the data is considered stale and fetched fresh from the source. Example: cache user data for 1 hour, then fetch fresh.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-caching-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-caching-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. When should you manually invalidate cache?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-3" value="1" data-correct="false">
+          <span>Every time data is read from cache</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-3" value="2" data-correct="true">
+          <span>When you know data has changed (user updates profile, price changes)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-3" value="3" data-correct="false">
+          <span>Never, let TTL handle it</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-3" value="4" data-correct="false">
+          <span>When cache reaches 50% capacity</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'caching-quiz', 3, 'Invalidate when you know data changed and consistency matters immediately. Example: User updates profile, delete cached profile. Do not wait for TTL to expire.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-caching-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-caching-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. What is the best caching strategy for production?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-4" value="1" data-correct="false">
+          <span>Only LRU</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-4" value="2" data-correct="false">
+          <span>Only TTL</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-4" value="3" data-correct="true">
+          <span>LRU plus TTL plus invalidation</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-caching-quiz-4" value="4" data-correct="false">
+          <span>No caching, query database directly</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'caching-quiz', 4, 'Production systems combine all three: LRU for optimization when full, TTL for eventual freshness, and invalidation for immediate consistency on critical updates.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-caching-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-caching-quiz" onclick="prevQuestion('caching-quiz', 4)" style="display: none;">← Previous</button>
+      <span class="quiz-progress" id="progress-caching-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-caching-quiz" onclick="nextQuestion('caching-quiz', 4)">Next →</button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('caching-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>
