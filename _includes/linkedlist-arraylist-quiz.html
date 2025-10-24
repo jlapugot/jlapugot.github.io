@@ -1,0 +1,120 @@
+<div class="quiz" id="quiz-linkedlist-arraylist-quiz">
+  <h3>Test Your Understanding</h3>
+  <div class="quiz-container">
+    <div class="quiz-question" id="q-linkedlist-arraylist-quiz-1" style="display: block;">
+      <p class="quiz-question-text"><strong>1. What is the time complexity of accessing an element by index in ArrayList?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-1" value="1" data-correct="true">
+          <span>O(1) - constant time</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-1" value="2" data-correct="false">
+          <span>O(n) - linear time</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-1" value="3" data-correct="false">
+          <span>O(log n) - logarithmic time</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-1" value="4" data-correct="false">
+          <span>O(n²) - quadratic time</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'linkedlist-arraylist-quiz', 1, 'ArrayList uses a backing array which allows direct index access. Getting element at index 50 is just array[50], which is O(1) constant time.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-linkedlist-arraylist-quiz-1" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-linkedlist-arraylist-quiz-2" style="display: none;">
+      <p class="quiz-question-text"><strong>2. When should you use LinkedList over ArrayList?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-2" value="1" data-correct="false">
+          <span>When you need random access by index</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-2" value="2" data-correct="true">
+          <span>When you frequently add or remove from the beginning (queue/deque)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-2" value="3" data-correct="false">
+          <span>When you want better memory efficiency</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-2" value="4" data-correct="false">
+          <span>Always, it performs better in all cases</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'linkedlist-arraylist-quiz', 2, 'LinkedList excels at addFirst and removeFirst operations (O(1)). Use it for queue or deque behavior. For most other cases, ArrayList is better.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-linkedlist-arraylist-quiz-2" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-linkedlist-arraylist-quiz-3" style="display: none;">
+      <p class="quiz-question-text"><strong>3. What is wrong with this code?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-3" value="1" data-correct="true">
+          <span>LinkedList.get(i) is O(n), making the loop O(n²)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-3" value="2" data-correct="false">
+          <span>LinkedList cannot be used in for loops</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-3" value="3" data-correct="false">
+          <span>You need to use iterator instead of index</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-3" value="4" data-correct="false">
+          <span>Nothing, this is the correct way</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'linkedlist-arraylist-quiz', 3, 'Each get(i) call in LinkedList requires traversing from the beginning, which is O(n). Doing this in a loop makes it O(n²). Use a for-each loop or iterator instead.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-linkedlist-arraylist-quiz-3" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-question" id="q-linkedlist-arraylist-quiz-4" style="display: none;">
+      <p class="quiz-question-text"><strong>4. Why does ArrayList have better cache performance than LinkedList?</strong></p>
+      <div class="quiz-options">
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-4" value="1" data-correct="true">
+          <span>Elements are stored contiguously in memory (better cache locality)</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-4" value="2" data-correct="false">
+          <span>ArrayList uses less memory overall</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-4" value="3" data-correct="false">
+          <span>ArrayList has faster algorithms</span>
+        </label>
+        <label class="quiz-option">
+          <input type="radio" name="q-linkedlist-arraylist-quiz-4" value="4" data-correct="false">
+          <span>LinkedList requires more CPU instructions</span>
+        </label>
+      </div>
+      <button class="quiz-btn-check" onclick="checkAnswer(event, 'linkedlist-arraylist-quiz', 4, 'ArrayList stores elements in a contiguous array. When CPU fetches one element, nearby elements are loaded into cache automatically. LinkedList nodes are scattered in memory, causing cache misses.')">Check Answer</button>
+      <div class="quiz-feedback" id="feedback-linkedlist-arraylist-quiz-4" style="display: none;">
+        <p class="quiz-feedback-text"></p>
+        <p class="quiz-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-navigation">
+      <button class="quiz-btn-nav" id="btn-prev-linkedlist-arraylist-quiz" onclick="prevQuestion('linkedlist-arraylist-quiz', 4)" style="display: none;">< Previous</button>
+      <span class="quiz-progress" id="progress-linkedlist-arraylist-quiz">1 / 4</span>
+      <button class="quiz-btn-nav" id="btn-next-linkedlist-arraylist-quiz" onclick="nextQuestion('linkedlist-arraylist-quiz', 4)">Next ></button>
+    </div>
+
+    <button class="quiz-btn-reset" onclick="resetQuiz('linkedlist-arraylist-quiz', 4)">Reset Quiz</button>
+  </div>
+</div>
